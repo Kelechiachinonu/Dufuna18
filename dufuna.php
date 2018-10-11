@@ -24,6 +24,7 @@ echo "The division of C AND A IS ". $z; "<br><br>";
 //QUIZ 3
  echo "<br><br>";
  $t = "temperature";
+ $t = 45;
 
  if ($t <= 20)   {
  	echo "It is really cold today!";
@@ -62,17 +63,15 @@ elseif ($t > 20 && $t < 30) {
 //QUIZ 5
 echo "<br><br><br>";
 
-$name ['Joy'] = "Coding";
-$name ['Kelechi'] = "Eating";
-$name ['Kayode'] = "Swimming";
-$name ['Lade'] = "Cooking";
-$name ['Gladys'] =  "Writing";
+$name = array ("Joy", "Kelechi", "Kayode", "Lade", "Gladys");
 
+$hobbies = array ('Coding', 'Eating', 'Swimming', 'Cooking', 'Writing');
 
-foreach ($name as $name => $hobbies) {
-	echo "My name is " .  $name. " .  I love ". $hobbies;
-	echo "<br>";
-}
+ foreach (array_combine($name, $hobbies) as $name => $hobbies) {
+ 	echo "My name is " .  $name. ". I love ". $hobbies. " . ";
+
+	echo "<br><br>";
+ }
 
 
 //QUIZ 6

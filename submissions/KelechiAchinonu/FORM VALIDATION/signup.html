@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+      <title> My SignUp Form </title>
+      <script type="text/javascript">
+        function validateForm() {
+        var firstname = document.regform.firstname;
+        if(firstname.value=="") {
+            alert ("Kindly fill in your First Name, example:JOHN");
+            firstname.focus();
+            return false;
+        }
+        
+        var lastname = document.regform.lastname;
+        if(lastname.value=="") {
+            alert ("Kindly fill in your Last Name, example:DOE");
+            lastname.focus();
+            return false;
+        }
+        
+        var email = document.regform.email;
+        if (email.value == "") {
+        alert("Please input your email address");
+        email.focus();
+        return false;
+        }
+        
+        var password = document.regform.password;
+        if(firstname.value=="") {
+            alert ("Kindly fill in your password,example:********");
+            password.focus();
+            return false;
+        }
+        
+        var confirm = document.regform.password;
+        if(confirm.value=="") {
+            alert ("Kindly confirm password,example:********");
+            confirm.focus();
+            return false;
+        }
+        
+        var phone = document.regform.phone
+        if (phone.value == "" || isNaN(phone.value)) {
+        alert("Phone number should be numeric.");
+        phone.focus();
+        return false;
+        }
+        
+        if (phone.value.length != 11) {
+        alert( "Phone number should be exactly 11 digits.");
+        phone.focus();
+        return false;
+        }
+        
+        var gender = document.regform.gender;
+        if(gender.value=="-1") {
+            alert ("Please select a class of gender");
+            gender.focus();
+            return false;
+        }
+        
+        var country = document.regform.country;
+        if (country.value == "-1") {
+        alert("Please select your country");
+        return false;
+        }
+        return true;
+        }
+        </script>
+  </head>
+
+  <body style="background-color: pink; font-size:25px">
+  	<form method="POST" name="regform" onsubmit="return validateForm()">
+  		<fieldset>
+  			<legend> SIGNUP FORM </legend>
+  		<label for="firstname"> Firstname: </label>
+  		<input type="text" name="firstname" id="firstname" placeholder="John" />
+
+  		<br />
+  		<label for="lastname"> Lastname: </label>
+  		<input type="lastname" name="lastname" id="lastname" />
+
+  		<br />
+  		<label for="email"> Email Address: </label>
+  		<input type="email" name="email" id="email"/>
+
+  		<br />
+  		<label for="password"> Password: </label>
+  		<input type="password" name="password" id="password"/>
+
+      <br />
+      <label for="password"> Confirm Password: </label>
+      <input type="password" name="password" id="password"/>
+
+  		<br />
+      <br />
+      <label for="phonenumber"> Phone Number: </label>
+      <input type="number" name="phone" id="phone" placeholder="070********" />
+        	<br/>
+
+        Gender:
+        <br/>
+        <input type="radio" name="gender" id="male" value="male"/>
+        <label for="male"> Male </label>
+        <br />
+        <input type="radio" name="gender" id="female" value="female"/>
+        <label for="female"> Female </label>
+        <br/>
+
+        <label for="country">Country: </label>
+        <br/>
+        <select name="country" id="country">
+        	<option value="nigeria" selected="nigeria"> Nigeria </option>
+        	<option value="kenya"> Kenya </option>
+        	<option value="ghana"> Ghana </option>
+        	<option value="southafrica"> South Africa </option>
+        	<option value="cameroon"> Cameroon </option>
+        </select>
+        <br/>
+
+  		<input type="submit" name="submit" value="Submit"/>
+  		<button type="reset" name="reset" value="reset"> Reset </button>
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </form>
+  </body>
+
+
+
+
+</html>
